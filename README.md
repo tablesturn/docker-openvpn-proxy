@@ -1,4 +1,9 @@
 Proxy through an OpenVPN client connection.
+Does not work yet.
+
+Forked from pbrisbin/docker-openvpn-proxy to be able to use openvpn config files from the host.
+I am not sure if I didn't understand what he wanted to do with the original --volume.
+We'll see if this works.
 
 ## Usage
 
@@ -7,12 +12,10 @@ docker run \
   --name vpn \
   --cap-add=NET_ADMIN \
   --publish 8118:8118 \
-  --env VPN_USER=xxx \
-  --env VPN_PASS=xxx \
-  --env VPN_GATEWAY=ch1.vpn.giganews.com \
-  --env VPN_CERTIFICATE=ca.vyprvpn.com.crt \
+  -v /path/to/vpnconfigfolder:/vpn \
   --detach \
-  pbrisbin/openvpn-proxy
+  your-build-id-here
+#  pbrisbin/openvpn-proxy
 ```
 
 **Note**: `VPN_CERTIFICATE` can be an absolute path or relative to
