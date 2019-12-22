@@ -14,8 +14,7 @@ docker run \
   --publish 8118:8118 \
   -v /path/to/vpnconfigfolder:/vpn \
   --detach \
-  your-build-id-here
-#  pbrisbin/openvpn-proxy
+  tablesturn/docker-openvpn-proxy
 ```
 
 **Note**: `VPN_CERTIFICATE` can be an absolute path or relative to
