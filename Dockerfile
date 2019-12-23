@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Pat Brisbin <pbrisbin@gmail.com>
+MAINTAINER Tablesturn
 RUN apk --update add openvpn privoxy supervisor
 EXPOSE 8118
 ADD files /
