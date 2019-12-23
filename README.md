@@ -1,20 +1,28 @@
 Proxy through an OpenVPN client connection.
-Does not work yet.
 
-Forked from pbrisbin/docker-openvpn-proxy to be able to use openvpn config files from the host and have the proxy only running if an openvpn connection is active (killswitch).
+This is quite unstable and I am still having IPv6 issues: IPv6 traffic is not tunneled trough vpn
 
-I am not sure if I didn't understand what he wanted to do with the original --volume.
+Forked from pbrisbin/docker-openvpn-proxy
 
-We'll see if this works.
+Changes done to his version:
+
+Now it is possible to use config files from the host file system.
+
+The proxy only running if an openvpn connection is active (killswitch).
+
+I am still not sure if I didn't understand what he wanted to do with the original --volume. However, the killswitch seems to be important in most situations.
+
+For me (raspberry pi running debian), Docker somewhat constantly broke my iptables and I was not able to bypass this using --iptables=false. The hotfix was a script I had to run manually after rebooting to load my firewall settings.
 
 ## Usage
 
 ```console
 docker run \
-  --name vpn \
+  --name vpn-proxy \
   --cap-add=NET_ADMIN \
   --publish 8118:8118 \
-  -v /path/to/vpnconfigfolder:/vpn \
+  --network host \
+  --volume ~/cyber:/vpn \
   --detach \
   tablesturn/docker-openvpn-proxy
 ```
