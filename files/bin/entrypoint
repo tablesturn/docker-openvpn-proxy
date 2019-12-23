@@ -14,6 +14,9 @@ mknod /dev/net/tun c 10 200
 #  "$VPN_PASS" > \
 #  /etc/openvpn/credentials.conf
 
+chmod +x /etc/privoxy/start-privoxy.sh
+chmod +x /etc/privoxy/stop-privoxy.sh
+
 #Does not work yet
 #chmod 600 /etc/openvpn/credentials.conf
 
