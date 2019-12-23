@@ -8,7 +8,7 @@ Changes done to his version:
 
 Now it is possible to use config files from the host file system.
 
-The proxy only running if an openvpn connection is active (killswitch).
+The proxy is only running if an openvpn connection is active (killswitch).
 
 I am still not sure if I didn't understand what he wanted to do with the original --volume. However, the killswitch seems to be important in most situations.
 
