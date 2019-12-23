@@ -14,6 +14,7 @@ mknod /dev/net/tun c 10 200
 #  "$VPN_PASS" > \
 #  /etc/openvpn/credentials.conf
 
-chmod 600 /etc/openvpn/credentials.conf
+#Does not work yet
+#chmod 600 /etc/openvpn/credentials.conf
 
 exec "$@"
