@@ -1,6 +1,8 @@
 # Docker container to use OpenVPN client as proxy
 
-Lightweight image to turn an OpenVPN client into a local http proxy server, allowing you to tunnel only specific applications through the VPN tunnel (and also different computers on your local network). It has an integrated kill-switch, which means that the proxy server will be killed before the VPN connection closes (even if something goes wrong with the VPN connection).
+Lightweight image to turn an OpenVPN client into a local http proxy server, allowing you to tunnel only specific applications through the VPN tunnel (and also different computers on your local network).
+
+It comes with an integrated kill-mechanism, which means that the proxy server will be killed before the VPN connection closes (even if something goes wrong with the VPN connection).
 
 ## Getting started
 
