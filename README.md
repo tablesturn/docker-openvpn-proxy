@@ -27,7 +27,6 @@ docker run \
   --name vpn-proxy \
   --cap-add=NET_ADMIN \
   --publish 8118:8118 \
-  --network host \
   --volume /path/to/vpn/config:/vpn \
   --detach \
   tablesturn/openvpn-proxy
