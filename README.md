@@ -6,7 +6,7 @@ It comes with an integrated kill-mechanism which means that the proxy server wil
 
 ## Getting started
 
-To use this image, you need a VPN server (provider) and a system to run the image. Because it bases on Alpine Linux, it can be built and run on multiple architectures (like Raspberry Pi). Dockerhub images coming soon.
+To use this image, you need a VPN server (provider) and a system to run the image. Because it bases on Alpine Linux, it can be built and run on multiple architectures (like Raspberry Pi). Currently, only the arm64 architecture is available on dockerhub.
 
 ### Prerequisites
 
