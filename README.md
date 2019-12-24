@@ -102,7 +102,7 @@ Something with your `client.conf` file or vpn server is wrong. Try to make your 
 ```console
 # Run from inside the container using:
 # docker exec -it vpn-proxy sh
-/usr/sbin/openvpn --cd /vpn --config client.conf
+/usr/sbin/openvpn --cd /vpn --script-security 2 --up '/etc/openvpn/up.sh' --down '/etc/openvpn/down.sh' --route-up '/etc/privoxy/start-privoxy.sh' --route-pre-down '/etc/privoxy/stop-privoxy.sh' --config client.conf
 ```
 
 ### I can not connect to the privoxy server
