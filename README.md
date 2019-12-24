@@ -17,7 +17,7 @@ You need the docker software installed to use this image. Also, keep in mind tha
 ```console
 git clone https://github.com/tablesturn/docker-openvpn-proxy.git
 cd docker-openvpn-proxy
-docker build . -t tablesturn/docker-openvpn-proxy
+docker build . -t tablesturn/openvpn-proxy
 ```
 
 ### Installing
@@ -30,7 +30,7 @@ docker run \
   --network host \
   --volume /path/to/vpn/config:/vpn \
   --detach \
-  tablesturn/docker-openvpn-proxy
+  tablesturn/openvpn-proxy
 ```
 
 ### Configuration
