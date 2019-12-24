@@ -41,6 +41,8 @@ Place the openvpn configuration file as `client.conf` and the credentials file i
 auth-user-pass credentials.conf
 ```
 
+Be aware of the permissions for your `client.conf` and `credentials.conf`.
+
 ### Testing
 
 Make sure that there are both an openvpn and a privoxy process running inside the docker container:
