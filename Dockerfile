@@ -5,5 +5,5 @@ EXPOSE 8118
 ADD files /
 ENTRYPOINT ["/bin/entrypoint"]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf", "-n"]
-# map config to host folder
+# Map config to host folder
 VOLUME ["/vpn"]
